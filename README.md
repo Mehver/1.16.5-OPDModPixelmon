@@ -1,26 +1,26 @@
 > [!IMPORTANT]
-> 
+>
+> This project is merely a Docker packaging of a server created by others. The server and client modpack's author is the PixelmonMod team. Detailed information is specified in the `3 Reference` section below. Please respect the original author's copyright.
+>
 > By using this project, you acknowledge and agree that the [Minecraft EULA](https://account.mojang.com/documents/minecraft_eula) is automatically set to TRUE.
-> 
+>
+> 此项目仅为对他人制作的服务器的 Docker 打包。此服务器和客户端模组包的作者是 PixelmonMod 团队。详细信息在下方的 `3 Reference` 中注明了，请尊重原作者版权。
+>
 > 使用本项目即表示您承认并同意 [Minecraft EULA](https://account.mojang.com/documents/minecraft_eula) 已自动设置为 TRUE。
 
 <div align="center">
-	<img §§template§§ src="https://github.com/OPDMC/Template-MCServer/raw/main/docs/%23README/icon.png" width="20%"/>
-    <h1>§§template§§-MCServer <code>v2.1</code></h1>
-	<a §§template§§ href='https://github.com/OPDMC/Template-MCServer'><img src="https://img.shields.io/badge/-GitHub-3A3A3A?style=flat&amp;logo=GitHub&amp;logoColor=white" referrerpolicy="no-referrer" alt="GitHub"></a>
-	<a §§template§§ href='https://github.com/OPDMC/Template-MCServer/pkgs/container/template-mcserver'><img src="https://img.shields.io/badge/Ghcr.io-v2.1-555555?labelColor=8957E5&style=flat&amp;logo=GitHub&amp;logoColor=white" referrerpolicy="no-referrer" alt="Ghcr.io"></a>
-	<a §§template§§ href='https://hub.docker.com/r/opdmc/template-mcserver'><img src="https://img.shields.io/badge/DockerHub-v2.1-555555?labelColor=1c90ed&style=flat&amp;logo=Docker&amp;logoColor=white" referrerpolicy="no-referrer" alt="DockerHub"></a>
+	<img src="https://github.com/OPDMC/1.16.5-OPDModPixelmon/raw/main/docs/%23README/icon.png" width="20%"/>
+    <h1>1.16.5-OPDModPixelmon <code>v1.0</code></h1>
+	<a href='https://github.com/OPDMC/1.16.5-OPDModPixelmon'><img src="https://img.shields.io/badge/-GitHub-3A3A3A?style=flat&amp;logo=GitHub&amp;logoColor=white" referrerpolicy="no-referrer" alt="GitHub"></a>
+	<a href='https://github.com/OPDMC/1.16.5-OPDModPixelmon/pkgs/container/1.16.5-opdmodpixelmon'><img src="https://img.shields.io/badge/Ghcr.io-v1.0-555555?labelColor=8957E5&style=flat&amp;logo=GitHub&amp;logoColor=white" referrerpolicy="no-referrer" alt="Ghcr.io"></a>
+	<a href='https://hub.docker.com/r/opdmc/1.16.5-opdmodpixelmon'><img src="https://img.shields.io/badge/DockerHub-v1.0-555555?labelColor=1c90ed&style=flat&amp;logo=Docker&amp;logoColor=white" referrerpolicy="no-referrer" alt="DockerHub"></a>
 
-![Docker Image Size §§template§§](https://img.shields.io/docker/image-size/opdmc/template-mcserver?arch=amd64&label=AMD64&color=006688) ![Docker Image Size §§template§§](https://img.shields.io/docker/image-size/opdmc/template-mcserver?arch=arm64&label=ARM64&color=008866)
+![Docker Image Size](https://img.shields.io/docker/image-size/opdmc/1.16.5-opdmodpixelmon?arch=amd64&label=AMD64&color=006688) ![Docker Image Size](https://img.shields.io/docker/image-size/opdmc/1.16.5-opdmodpixelmon?arch=arm64&label=ARM64&color=008866)
     </tr>
 </div>
 
 
 ## 1 Description
-
-所有包含 `§§template§§` 的内容都是模板，需要在使用时替换。
-
-Everything that includes `§§template§§` is a template and needs to be replaced when used.
 
 这是OPDMC群友自用的Docker化MC服务器。其目的是为了便于部署。整合的插件/模组作者在下方的 `3 Reference` 中注明了，请尊重原作者版权。
 
@@ -35,19 +35,18 @@ Version numbers are represented as `vA.B` (eg: `v1.0`, `v1.1`, `v2.0`), where ch
 ## 2 Usage
 
 ```shell
-# DockerHub §§template§§
-docker pull opdmc/template-mcserver:latest
-# Ghcr.io §§template§§
-docker pull ghcr.io/opdmc/template-mcserver:latest
+# DockerHub
+docker pull opdmc/1.16.5-opdmodpixelmon:latest
+# Ghcr.io
+docker pull ghcr.io/opdmc/1.16.5-opdmodpixelmon:latest
 ```
 
 ```shell
-#§§template§§
 docker run -d \
-  --name=template-mcserver \
+  --name=1.16.5-opdmodpixelmon \
   -p 127.0.0.1:80:25565/tcp \
   -v /path/to/store/data:/minecraft \
-  opdmc/template-mcserver
+  opdmc/1.16.5-opdmodpixelmon
 ```
 
 | Parameter                             | Function                                                        |                                  |
@@ -55,10 +54,59 @@ docker run -d \
 | `-p 127.0.0.1:80:25565/tcp`           | Minecraft server port                                           | MC服务器端口                          |
 | `-v /path/to/store/data:/minecraft`   | To store data in local, auto initialize if `start.sh` NOT exist | 服务器文件映射路径, `start.sh` 存在时将不进行初始化 |
 
-## 3 Reference §§template§§
+## 3 Reference
 
-- **Fabric**
-  - https://fabricmc.net/
+- ***Pixelmon Modpack***
+  - **Official Website**
+    - https://reforged.gg/
+    - https://pixelmonmod.com/
+  - **Modpack Source**
+    - https://www.curseforge.com/minecraft/modpacks/the-pixelmon-modpack
+
+- ***All Mods***
+  - **Pixelmon (PMRE)**
+    - https://pixelmonmod.com/wiki/Main_Page
+    - https://reforged.gg/
+    - https://www.curseforge.com/minecraft/mc-mods/pixelmon
+  - **Forge**
+    - https://files.minecraftforge.net/net/minecraftforge/forge/
+  - **Apple Skin**
+    - https://github.com/squeek502/AppleSkin
+    - https://www.curseforge.com/minecraft/mc-mods/appleskin
+  - **Biomes O' Plenty (BOP)**
+    - https://github.com/Glitchfiend/BiomesOPlenty
+    - https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty
+  - **Explorer's Compass**
+    - https://github.com/MattCzyr/ExplorersCompass
+    - https://www.curseforge.com/minecraft/mc-mods/explorers-compass
+  - **Fancy Menu & Konkrete**
+    - https://github.com/Keksuccino/FancyMenu
+    - https://www.curseforge.com/minecraft/mc-mods/fancymenu
+    - https://github.com/Keksuccino/Konkrete
+    - https://www.curseforge.com/minecraft/mc-mods/konkrete
+  - **Oh The Biomes You'll Go (BYG)**
+    - https://github.com/Potion-Studios/BYG
+    - https://biomesyougo.weebly.com/
+    - https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-youll-go
+  - **Inventory Profiles Next (IPN) & libIPN & Kotlin For Forge**
+    - https://github.com/blackd/Inventory-Profiles
+    - https://www.curseforge.com/minecraft/mc-mods/inventory-profiles-next
+    - https://github.com/blackd/libIPN
+    - https://www.curseforge.com/minecraft/mc-mods/libipn
+    - https://github.com/thedarkcolour/KotlinForForge
+    - https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge
+  - **Jade**
+    - https://github.com/Snownee/Jade
+    - https://www.curseforge.com/minecraft/mc-mods/jade
+  - **Just Enough Items (JEI)**
+    - https://github.com/mezz/JustEnoughItems
+    - https://www.curseforge.com/minecraft/mc-mods/jei
+  - **Journey Map**
+    - https://teamjm.github.io/journeymap-docs/latest/
+    - https://www.curseforge.com/minecraft/mc-mods/journeymap
+  - **Nature's Compass**
+    - https://github.com/MattCzyr/NaturesCompass
+    - https://www.curseforge.com/minecraft/mc-mods/natures-compass
 
 ## 4 License
 

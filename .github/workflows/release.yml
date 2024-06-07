@@ -103,31 +103,68 @@ jobs:
           REPO_NAME_LOWER=$(echo $REPO_NAME | tr '[:upper:]' '[:lower:]')
           RELEASE_TAG=$(echo ${{ github.ref }} | sed 's/refs\/tags\///')
           RELEASE_TAG_LOWER=$(echo $RELEASE_TAG | tr '[:upper:]' '[:lower:]')
-          TEMP_DIR="client-version-pkg_${REPO_NAME_LOWER}_${RELEASE_TAG_LOWER}"
+          TEMP_DIR="client-versionpack_${REPO_NAME_LOWER}_${RELEASE_TAG_LOWER}"
+          TEMP_MOD_DIR="client-modpack_${REPO_NAME_LOWER}_${RELEASE_TAG_LOWER}"
           echo "::set-output name=repo_name::$REPO_NAME"
           echo "::set-output name=repo_name_lower::$REPO_NAME_LOWER"
           echo "::set-output name=release_tag::$RELEASE_TAG"
           echo "::set-output name=release_tag_lower::$RELEASE_TAG_LOWER"
           echo "::set-output name=temp_dir::$TEMP_DIR"
+          echo "::set-output name=temp_mod_dir::$TEMP_MOD_DIR"
 
-      - name: Create temporary directory
-        run: mkdir ${{ steps.vars.outputs.temp_dir }}
+      - name: Create temporary directory for version package
+        run: mkdir -p ${{ steps.vars.outputs.temp_dir }}
 
-      - name: Copy minecraft_client to temporary directory
-        run: cp -r minecraft_client ${{ steps.vars.outputs.temp_dir }}/${{ steps.vars.outputs.repo_name }}
+      - name: Copy minecraft_client_versionpack to temporary directory
+        run: cp -r minecraft_client_versionpack ${{ steps.vars.outputs.temp_dir }}/${{ steps.vars.outputs.repo_name }}
 
-      - name: Zip the directory
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install pyunpack patool
+
+      - name: Run ClientPkgReformat.py script
+        run: python .github/scripts/ClientPkgReformat.py ${{ steps.vars.outputs.temp_dir }}/${{ steps.vars.outputs.repo_name }}
+
+      - name: Zip the directory for version package
         run: |
           cd ${{ steps.vars.outputs.temp_dir }}
           zip -r ../${{ steps.vars.outputs.temp_dir }}.zip .
           cd ..
 
-      - name: Upload zip to release
+      - name: Upload version package zip to release
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ${{ steps.vars.outputs.temp_dir }}.zip
           asset_name: ${{ steps.vars.outputs.temp_dir }}.zip
+          asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Create temporary directory for modpack
+        run: mkdir -p ${{ steps.vars.outputs.temp_mod_dir }}
+
+      - name: Copy minecraft_client_modpack to temporary directory for modpack
+        run: cp -r minecraft_client_modpack/* ${{ steps.vars.outputs.temp_mod_dir }}
+
+      - name: Zip the directory for modpack
+        run: |
+          cd ${{ steps.vars.outputs.temp_mod_dir }}
+          zip -r ../${{ steps.vars.outputs.temp_mod_dir }}.zip .
+          cd ..
+
+      - name: Upload modpack zip to release
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ${{ steps.vars.outputs.temp_mod_dir }}.zip
+          asset_name: ${{ steps.vars.outputs.temp_mod_dir }}.zip
           asset_content_type: application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -155,15 +192,18 @@ jobs:
           tag_count=$(echo "$tags" | wc -w)
           echo "Tag count: $tag_count"
           if [ "$tag_count" -lt 2 ]; then
-            echo "Error: Not enough tags to determine previous tag." >&2
-            exit 1
+            echo "Not enough tags to determine previous tag."
+            echo "UPDATE_README=false" >> $GITHUB_ENV
+            prev_tag=""
+          else
+            prev_tag=$(echo "$tags" | awk '{print $2}')
+            if [ -z "$prev_tag" ]; then
+              echo "Error: Could not determine previous tag." >&2
+              exit 1
+            fi
+            echo "Previous tag is $prev_tag"
+            echo "UPDATE_README=true" >> $GITHUB_ENV
           fi
-          prev_tag=$(echo "$tags" | awk '{print $2}')
-          if [ -z "$prev_tag" ]; then
-            echo "Error: Could not determine previous tag." >&2
-            exit 1
-          fi
-          echo "Previous tag is $prev_tag"
           echo "PREV_TAG=$prev_tag" >> $GITHUB_ENV
 
       - name: Get current tag
@@ -175,6 +215,7 @@ jobs:
         run: echo "BRANCH=main" >> $GITHUB_ENV
 
       - name: Update version numbers
+        if: env.PREV_TAG != ''
         env:
           GITHUB_WORKSPACE: ${{ github.workspace }}
           PREV_TAG: ${{ env.PREV_TAG }}

@@ -1,0 +1,170 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screens.TitleScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+  [loading_requirement:fancymenu_visibility_requirement_is_layout_enabled][requirement_mode:if][group:nightandpar][req_id:a48a91b0-683a-4ac7-8e07-bd60b5852fa31696287596175] = night_2pixelmon
+  [loading_requirement_group:nightandstatic] = [group_mode:and]
+  [loading_requirement:fancymenu_visibility_requirement_is_variable_value][requirement_mode:if][group:nightandpar][req_id:17b6ba34-5745-46d3-8a51-e4e711efa8831698181330510] = is_night:true
+}
+
+customization {
+  action = setscale
+  scale = 2
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_quit_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_realms_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
+  action = hidebutton
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 2
+  width = 165
+  action = deep_customization_element:title_screen_branding
+  actionid = f2e1f6cb-d7cc-45ea-8a6c-5b453662a0961690522272269
+  y = 403
+  height = 10
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 463
+  width = 13
+  action = deep_customization_element:title_screen_realms_notification
+  actionid = fc55816d-810d-4d83-bb6b-dda2fd05f2011690522272269
+  y = 203
+  height = 13
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 223
+  width = 274
+  action = deep_customization_element:title_screen_logo
+  actionid = 6d718be2-fc78-47f0-9d55-044440c68b471690522272269
+  y = 30
+  height = 52
+}
+
+customization {
+  orientation = original
+  splash_color = #ffff00
+  hidden = true
+  x = 0
+  width = 60
+  splash_rotation = -20
+  action = deep_customization_element:title_screen_splash
+  actionid = 85ad5827-65ad-404a-b0c2-daa4adc4f1c31690522272269
+  y = 0
+  height = 30
+}
+
+customization {
+  orientation = top-left
+  hidden = false
+  x = 346
+  width = 268
+  action = deep_customization_element:title_screen_forge_top
+  actionid = 680188b9-eeba-4f1e-a1ce-b236e52c81771696286579169
+  y = 4
+  height = 19
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 731
+  width = 228
+  action = deep_customization_element:title_screen_forge_copyright
+  actionid = b79e15f2-4118-4ae3-be42-bf193e04dff91696286579169
+  y = 545
+  height = 9
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.08)","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = toggle_layout;night_2pixelmon%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/night/fall/buttons/fallback_sel.png
+  label = 
+  advanced_width = {"placeholder":"calc","values":{"expression":"(({"placeholder":"guiheight"} * 0.148)) * 4.321","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.54)","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 361
+  action = addbutton
+  actionid = 009f374b-e64a-4223-bc79-52aa416cd1851696287587323
+  y = 0
+  backgroundnormal = config/fancymenu/resources/night/fall/buttons/fallback.png
+  height = 45
+}
+
+customization {
+  identifier = %id=802990%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=400322%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=502322%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=604382%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=5023461%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=376382%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:forge_titlescreen_mods_button%
+  action = hidebutton
+}
+

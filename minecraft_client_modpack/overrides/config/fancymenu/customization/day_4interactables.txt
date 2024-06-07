@@ -1,0 +1,591 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screens.TitleScreen
+  randomgroup = 1
+  [loading_requirement:fancymenu_visibility_requirement_is_variable_value][requirement_mode:if][req_id:c640e176-5e75-47d0-9b68-1806590f55201698181736008] = is_night:false
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  action = setscale
+  scale = 2
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  identifier = %id=400322%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=502322%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=604382%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_quit_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=5023461%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=376382%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:forge_titlescreen_mods_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_realms_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
+  action = hidebutton
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 2
+  width = 165
+  action = deep_customization_element:title_screen_branding
+  actionid = f2e1f6cb-d7cc-45ea-8a6c-5b453662a0961690522272269
+  y = 403
+  height = 10
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 463
+  width = 13
+  action = deep_customization_element:title_screen_realms_notification
+  actionid = fc55816d-810d-4d83-bb6b-dda2fd05f2011690522272269
+  y = 203
+  height = 13
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 223
+  width = 274
+  action = deep_customization_element:title_screen_logo
+  actionid = 6d718be2-fc78-47f0-9d55-044440c68b471690522272269
+  y = 30
+  height = 52
+}
+
+customization {
+  orientation = original
+  splash_color = #ffff00
+  hidden = true
+  x = 0
+  width = 60
+  splash_rotation = -20
+  action = deep_customization_element:title_screen_splash
+  actionid = 85ad5827-65ad-404a-b0c2-daa4adc4f1c31690522272269
+  y = 0
+  height = 30
+}
+
+customization {
+  orientation = top-left
+  hidden = false
+  x = 346
+  width = 268
+  action = deep_customization_element:title_screen_forge_top
+  actionid = b916e453-86c9-49d2-bf60-e761c1c738781692810903189
+  y = 4
+  height = 19
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 731
+  width = 228
+  action = deep_customization_element:title_screen_forge_copyright
+  actionid = a82e87a5-4aca-4184-b8fa-4d5735992a0e1692810903189
+  y = 545
+  height = 9
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.171)","decimal":"false"}}
+  path = config/fancymenu/resources/day/fall/lower_bar.png
+  orientation = bottom-left
+  x = 0
+  width = %guiwidth%
+  action = addtexture
+  actionid = 28e8c9cf-6f64-4551-999f-002323b1d9de1690947023447
+  y = 0
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.828)","decimal":"false"}}
+  height = 97
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.359)","decimal":"false"}}
+  path = config/fancymenu/resources/day/fall/main_menu_back.png
+  orientation = top-right
+  x = 0
+  width = 310
+  action = addtexture
+  actionid = 8df43b1e-dbdd-460c-a7cf-ce2a2fa413f31690950694785
+  y = 0
+  advanced_posx = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} - (({"placeholder":"guiheight"} * 0.359)) * 1.529)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"(({"placeholder":"guiheight"} * 0.359)) * 1.529","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.328)","decimal":"false"}}
+  height = 203
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"{"placeholder":"guiheight"}*0.053","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = mimicbutton;net.minecraft.client.gui.screen.MainMenuScreen:400322%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/extra_customize_player_sel.png
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposx","values":{"id":"1b0dd185-f407-41d0-a071-1c4c0c4ac7ad1691130478073"}} + {"placeholder":"elementwidth","values":{"id":"1b0dd185-f407-41d0-a071-1c4c0c4ac7ad1691130478073"}} * 0.351 * 1.09","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"}*0.053) * 6.65","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposy","values":{"id":"1b0dd185-f407-41d0-a071-1c4c0c4ac7ad1691130478073"}} + {"placeholder":"elementheight","values":{"id":"1b0dd185-f407-41d0-a071-1c4c0c4ac7ad1691130478073"}} * 0.351 * 1.45","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 199
+  action = addbutton
+  actionid = fa0816c7-dede-42a0-932d-97192efb50301691131143347
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/extra_customize_player.png
+  [loading_requirement:fancymenu_visibility_requirement_is_layout_enabled][requirement_mode:if][req_id:040d2259-5b2d-4832-86a8-27b8432b54581696289195176] = day_2pixelmon
+  height = 30
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.283)","decimal":"false"}}
+  path = config/fancymenu/resources/day/fall/logo.png
+  orientation = top-left
+  x = 0
+  width = 387
+  action = addtexture
+  actionid = 8df43b1e-dbdd-460c-a7cf-ce2a2fa413f31690950694785
+  y = 0
+  advanced_posx = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} - (({"placeholder":"guiheight"} * 0.283)) * 2.421) - ({"placeholder":"guiheight"} * 0.0608)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"(({"placeholder":"guiheight"} * 0.283)) * 2.421","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.042)","decimal":"false"}}
+  height = 160
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.053)","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = toggle_layout;day_2pixelmon%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/parallax_sel.png
+  description = Toggle parallax background
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} - (({"placeholder":"guiheight"} * 0.1))) - ({"placeholder":"guiheight"} * 0.0003)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"(({"placeholder":"guiheight"} * 0.053))","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.688)","decimal":"false"}}
+  loopbackgroundanimations = true
+  hoverlabel = 
+  x = 0
+  width = 30
+  action = addbutton
+  actionid = 089b4d28-1c15-4a3a-8d99-063dc12812ed1692810903161
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/parallax.png
+  height = 30
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.053)","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = mimicbutton;net.minecraft.client.gui.screens.TitleScreen:604382%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/accessibility_sel.png
+  description = Accessibility
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} - (({"placeholder":"guiheight"} * 0.155))) - ({"placeholder":"guiheight"} * 0.0003)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"(({"placeholder":"guiheight"} * 0.053))","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.688)","decimal":"false"}}
+  loopbackgroundanimations = true
+  hoverlabel = 
+  x = 0
+  width = 30
+  action = addbutton
+  actionid = 6fb886f2-8b4b-40bd-97c5-fa649780cd041696287449056
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/accessibility.png
+  height = 30
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementheight","values":{"id":"8df43b1e-dbdd-460c-a7cf-ce2a2fa413f31690950694785"}} / 4","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = mimicbutton;net.minecraft.class_442:button_compatibility_id:mc_titlescreen_singleplayer_button%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/main_empty_sel.png
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} - (({"placeholder":"guiheight"} * 0.359)) * 1.529)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementwidth","values":{"id":"8df43b1e-dbdd-460c-a7cf-ce2a2fa413f31690950694785"}}","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.328)","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 310
+  action = addbutton
+  actionid = 62428e06-6a2e-4587-908f-7055a93465031690952474150
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/main_empty.png
+  height = 51
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementheight","values":{"id":"8df43b1e-dbdd-460c-a7cf-ce2a2fa413f31690950694785"}} / 4","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = mimicbutton;net.minecraft.class_442:button_compatibility_id:mc_titlescreen_multiplayer_button%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/main_empty_sel.png
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} - (({"placeholder":"guiheight"} * 0.359)) * 1.529)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementwidth","values":{"id":"8df43b1e-dbdd-460c-a7cf-ce2a2fa413f31690950694785"}}","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.328) +  + {"placeholder":"elementheight","values":{"id":"62428e06-6a2e-4587-908f-7055a93465031690952474150"}}","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 310
+  action = addbutton
+  actionid = 50906280-7ce8-4083-8b9e-4c008a99e4901690960640286
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/main_empty.png
+  height = 51
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementheight","values":{"id":"8df43b1e-dbdd-460c-a7cf-ce2a2fa413f31690950694785"}} / 4","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = mimicbutton;net.minecraft.class_442:button_compatibility_id:mc_titlescreen_options_button%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/main_empty_sel.png
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} - (({"placeholder":"guiheight"} * 0.359)) * 1.529)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementwidth","values":{"id":"8df43b1e-dbdd-460c-a7cf-ce2a2fa413f31690950694785"}}","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.328) + ({"placeholder":"elementheight","values":{"id":"62428e06-6a2e-4587-908f-7055a93465031690952474150"}}) * 2","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 310
+  action = addbutton
+  actionid = a53f2d87-ca9b-49b0-b72c-cd84b13a75701690960640288
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/main_empty.png
+  height = 51
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementheight","values":{"id":"8df43b1e-dbdd-460c-a7cf-ce2a2fa413f31690950694785"}} / 4","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = mimicbutton;net.minecraft.class_442:button_compatibility_id:mc_titlescreen_quit_button%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/main_empty_sel.png
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} - (({"placeholder":"guiheight"} * 0.359)) * 1.529)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementwidth","values":{"id":"8df43b1e-dbdd-460c-a7cf-ce2a2fa413f31690950694785"}}","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.328) + ({"placeholder":"elementheight","values":{"id":"62428e06-6a2e-4587-908f-7055a93465031690952474150"}}) * 3","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 310
+  action = addbutton
+  actionid = 6d42be5e-d12a-48e5-8aa4-bf448ac0ecf31690960609502
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/main_empty.png
+  height = 51
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.171)","decimal":"false"}}
+  path = config/fancymenu/resources/day/fall/buttons/discord_back.png
+  orientation = top-left
+  x = 0
+  width = 113
+  action = addtexture
+  actionid = 4532701f-6852-444a-9c66-69f8738bbd671690960882756
+  y = 10
+  advanced_width = {"placeholder":"calc","values":{"expression":"(({"placeholder":"guiheight"} * 0.171)) * 1.169","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.829)","decimal":"false"}}
+  height = 97
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.171)","decimal":"false"}}
+  orientation = top-right
+  restartbackgroundanimations = true
+  buttonaction = openlink;https://pixelmonmod.com/application.php%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/extra_team_sel.png
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} - (({"placeholder":"guiheight"} * 0.171)) * 3.246)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"(({"placeholder":"guiheight"} * 0.171)) * 3.246","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.829)","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 314
+  action = addbutton
+  actionid = b9f9a680-0783-44e9-917d-c38ed8741b2c1690961275364
+  y = 10
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/extra_team.png
+  height = 97
+}
+
+customization {
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = mimicbutton;net.minecraft.client.gui.screen.MainMenuScreen:400322%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/extra_customize_player_sel.png
+  [loading_requirement:fancymenu_visibility_requirement_is_layout_enabled][requirement_mode:if_not][req_id:040d2259-5b2d-4832-86a8-27b8432b54581696289195176] = day_2pixelmon
+  label = 
+  advanced_width = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"}*0.053) * 6.65","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.565)","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 199
+  action = addbutton
+  actionid = 8b0299dd-e3ed-4ece-84a8-111c2b441adc1696289183688
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/extra_customize_player.png
+  height = 30
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.148)","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = openlink;https://nodecraft.com/r/pixelmon%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/extra_nodecraft_text_sel.png
+  label = 
+  advanced_width = {"placeholder":"calc","values":{"expression":"(({"placeholder":"guiheight"} * 0.148)) * 4.321","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.64)","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 361
+  action = addbutton
+  actionid = 66671860-fc9a-413b-a987-8b34ce2f398b1690962147287
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/extra_nodecraft_text.png
+  height = 84
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.148)","decimal":"false"}}
+  path = config/fancymenu/resources/day/fall/buttons/extra_nodecraft.png
+  orientation = top-left
+  x = 0
+  width = 361
+  action = addtexture
+  actionid = 4532701f-6852-444a-9c66-69f8738bbd671690960882756
+  y = 10
+  advanced_width = {"placeholder":"calc","values":{"expression":"(({"placeholder":"guiheight"} * 0.148)) * 4.321","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.64)","decimal":"false"}}
+  height = 84
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.145)","decimal":"false"}}
+  path = config/fancymenu/resources/day/fall/placeholder.png
+  orientation = top-left
+  x = 0
+  width = 629
+  action = addtexture
+  actionid = e0101974-0a98-40db-8277-47e2796514db1691027871483
+  y = 10
+  advanced_posx = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} * 0.001)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"{"placeholder":"guiwidth"} - (({"placeholder":"guiwidth"} * 0.018) + {"placeholder":"elementwidth","values":{"id":"b9f9a680-0783-44e9-917d-c38ed8741b2c1690961275364"}})","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 0.841)","decimal":"false"}}
+  height = 82
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"(({"placeholder":"elementheight","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}})/((1)+(2.718^-((1/70)*({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}-220)))))+5","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = openlink;https://discord.gg/pixelmon%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/discord_sel.png
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposx","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}} + (({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}/6)*0)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"1.25*(({"placeholder":"elementheight","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}})/((1)+(2.718^-((1/70)*({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}-220)))))+5","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposy","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 107
+  action = addbutton
+  actionid = 4aece764-7cd7-42fa-9d10-ff3feb12bb081691045480108
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/discord.png
+  height = 87
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"(({"placeholder":"elementheight","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}})/((1)+(2.718^-((1/70)*({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}-220)))))+5","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = openlink;https://pixelmonmod.com/wiki%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/wiki_sel.png
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposx","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}} + (({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}/6)*1)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"1.25*(({"placeholder":"elementheight","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}})/((1)+(2.718^-((1/70)*({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}-220)))))+5","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposy","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 107
+  action = addbutton
+  actionid = 74b6b98b-e0f6-4e70-8708-b5ccb49ed4401691113344599
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/wiki.png
+  height = 87
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"(({"placeholder":"elementheight","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}})/((1)+(2.718^-((1/70)*({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}-220)))))+5","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = openlink;https://pixelmonmod.com%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/web_sel.png
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposx","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}} + (({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}/6)*2)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"1.25*(({"placeholder":"elementheight","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}})/((1)+(2.718^-((1/70)*({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}-220)))))+5","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposy","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 107
+  action = addbutton
+  actionid = aac2da26-dd77-489d-aa67-9422ef3c1fb61691113344602
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/web.png
+  height = 87
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"(({"placeholder":"elementheight","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}})/((1)+(2.718^-((1/70)*({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}-220)))))+5","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = mimicbutton;net.minecraft.class_442:button_compatibility_id:mc_titlescreen_language_button%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/lang_sel.png
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposx","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}} + (({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}/6)*3)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"1.3*(({"placeholder":"elementheight","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}})/((1)+(2.718^-((1/70)*({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}-220)))))+5","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposy","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 111
+  action = addbutton
+  actionid = e4bdb149-3915-43f5-9f90-54afa525f5a91691113344605
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/lang.png
+  height = 87
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"(({"placeholder":"elementheight","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}})/((1)+(2.718^-((1/70)*({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}-220)))))+5","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = openfile;logs%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/logs_sel.png
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposx","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}} + (({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}/6)*4)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"1.25*(({"placeholder":"elementheight","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}})/((1)+(2.718^-((1/70)*({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}-220)))))+5","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposy","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 107
+  action = addbutton
+  actionid = eaca3306-5616-43e5-bf89-c701bd8395d41691113344608
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/logs.png
+  height = 87
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"(({"placeholder":"elementheight","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}})/((1)+(2.718^-((1/70)*({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}-220)))))+5","decimal":"false"}}
+  orientation = top-left
+  restartbackgroundanimations = true
+  buttonaction = openfile;./%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/resources/day/fall/buttons/files_sel.png
+  label = 
+  advanced_posx = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposx","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}} + (({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}/6)*5)","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"1.25*(({"placeholder":"elementheight","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}})/((1)+(2.718^-((1/70)*({"placeholder":"elementwidth","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}-220)))))+5","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"{"placeholder":"elementposy","values":{"id":"e0101974-0a98-40db-8277-47e2796514db1691027871483"}}","decimal":"false"}}
+  loopbackgroundanimations = true
+  x = 0
+  width = 107
+  action = addbutton
+  actionid = 35eb99d2-9b57-4a31-8bb9-a51371c77e371691113344611
+  y = 0
+  backgroundnormal = config/fancymenu/resources/day/fall/buttons/files.png
+  height = 87
+}
+
+customization {
+  orientation = top-left
+  enable_scrolling = true
+  shadow = true
+  scale = 0.9
+  source = Forge %version:forge% for Minecraft %mcversion%%n%Mods Loaded (%loadedmods% / %totalmods%)
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = 1
+  width = 250
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = d59a6bb6-429e-49cf-95af-e2d2d33fd9db1691136267140
+  y = 0
+  alignment = left
+  height = 34
+}
+
+customization {
+  orientation = top-right
+  enable_scrolling = true
+  shadow = true
+  scale = 0.9
+  source = Copyright Mojang AB. Do not distribute!%n%Installed Pixelmon: v%version:pixelmon%%n%Latest Pixelmon: v%json:https://reforged.gg/forge/update.json;path:$.promos.["1.20.2-latest"]%
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -200
+  width = 200
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 985b26cb-9d35-424f-9d22-15e56c67a33e1691136982769
+  y = 0
+  alignment = right
+  height = 40
+}
+

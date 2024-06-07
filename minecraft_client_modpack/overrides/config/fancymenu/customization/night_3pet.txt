@@ -1,0 +1,247 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screens.TitleScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+  [loading_requirement:fancymenu_visibility_requirement_is_layout_enabled][requirement_mode:if][group:nightandpar][req_id:db867ec1-022b-46b2-bbf2-df8ff778f2171696286458666] = night_2pixelmon
+  [loading_requirement_group:nightandstatic] = [group_mode:and]
+  [loading_requirement:fancymenu_visibility_requirement_is_variable_value][requirement_mode:if][group:nightandpar][req_id:17b6ba34-5745-46d3-8a51-e4e711efa8831698181330510] = is_night:true
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_copyright_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_accessibility_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_quit_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_language_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_realms_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
+  action = hidebutton
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 2
+  width = 165
+  action = deep_customization_element:title_screen_branding
+  actionid = efffa9ee-a2bf-4f34-8664-3acb3a26dc3b1691131790482
+  y = 553
+  height = 10
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 583
+  width = 13
+  action = deep_customization_element:title_screen_realms_notification
+  actionid = 57b597a0-6ef6-490b-84b4-6954d50e5aee1691131790482
+  y = 241
+  height = 13
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 343
+  width = 274
+  action = deep_customization_element:title_screen_logo
+  actionid = 7f2ec6af-4431-4064-bb76-466cf759dbd71691131790482
+  y = 30
+  height = 52
+}
+
+customization {
+  orientation = original
+  splash_color = #ffff00
+  hidden = true
+  x = 0
+  width = 60
+  splash_rotation = -20
+  action = deep_customization_element:title_screen_splash
+  actionid = 3d67f9f3-1d96-4376-81e6-ed53845bd74f1691131790482
+  y = 0
+  height = 30
+}
+
+customization {
+  orientation = top-left
+  hidden = false
+  x = 186
+  width = 268
+  action = deep_customization_element:title_screen_forge_top
+  actionid = 79f5e2e6-5342-4b1f-aa7a-6ccd795719ee1696286446413
+  y = 4
+  height = 19
+}
+
+customization {
+  orientation = top-left
+  hidden = false
+  x = 411
+  width = 228
+  action = deep_customization_element:title_screen_forge_copyright
+  actionid = 57eb3e95-b056-41b9-9bc3-a65618039fb21696286446413
+  y = 357
+  height = 9
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"}) * 1.3","decimal":"false"}}
+  path = config/fancymenu/resources/night/fall/placeholder.png
+  orientation = top-left
+  x = 0
+  width = 107
+  action = addtexture
+  actionid = bbf1be76-85de-4f98-a626-4a3afa43d7c81691135061629
+  y = 0
+  advanced_posx = {"placeholder":"calc","values":{"expression":"0","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} * (1/6))","decimal":"false"}}
+  height = 490
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"}) * 1.3","decimal":"false"}}
+  path = config/fancymenu/resources/night/fall/people/flame_crop.gif
+  orientation = top-left
+  x = 0
+  width = 865
+  action = addtexture
+  actionid = 1b0dd185-f407-41d0-a071-1c4c0c4ac7ad1691130478073
+  y = 0
+  advanced_posx = {"placeholder":"calc","values":{"expression":"(-0.11*({"placeholder":"guiheight"} * 1.78) * 1.3) + ((-{"placeholder":"mouseposx"}) - (({"placeholder":"guiheight"} * 1.78) * 1.3)/2) /100","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 1.78) * 1.3","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"(-0.11*({"placeholder":"guiheight"}) * 1.3) + ((-{"placeholder":"mouseposy"}) - (({"placeholder":"guiheight"}) * 1.3)/2) /100","decimal":"false"}}
+  height = 486
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"}) * 1.3","decimal":"false"}}
+  path = config/fancymenu/resources/night/fall/placeholder.png
+  orientation = top-left
+  x = 0
+  width = 213
+  action = addtexture
+  actionid = 5a13ac09-ef4d-4f6d-8877-15a1d38af0561691135061630
+  y = 0
+  advanced_posx = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} * (2/6))","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} * (1/3))","decimal":"false"}}
+  height = 490
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"}) * 1.3","decimal":"false"}}
+  path = config/fancymenu/resources/night/fall/placeholder.png
+  orientation = top-left
+  x = 0
+  width = 213
+  action = addtexture
+  actionid = 8ed4c482-1b0c-4bbe-ad0f-bd0bb8bed4c71691135061630
+  y = 0
+  advanced_posx = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} * (4/6))","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiwidth"} * (1/3))","decimal":"false"}}
+  height = 490
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"}) * 1.3","decimal":"false"}}
+  orientation = top-left
+  advanced_posx = {"placeholder":"calc","values":{"expression":"(-0.11*({"placeholder":"guiheight"} * 1.78) * 1.3) + ((-{"placeholder":"mouseposx"}) - (({"placeholder":"guiheight"} * 1.78) * 1.3)/2) /100","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 1.78) * 1.3","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"(-0.11*({"placeholder":"guiheight"}) * 1.3) + ((-{"placeholder":"mouseposy"}) - (({"placeholder":"guiheight"}) * 1.3)/2) /100","decimal":"false"}}
+    path = config/fancymenu/resources/night/fall/placeholder.png
+  x = 0
+  width = 872
+  action = addtexture
+  actionid = b7851154-7469-430d-85a3-d8e5603920e51691135081565
+  y = 0
+  [loading_requirement:fancymenu_visibility_requirement_is_element_hovered][requirement_mode:if][req_id:5987f0e1-3765-4bf0-87f9-7809578295771691135144146] = 8ed4c482-1b0c-4bbe-ad0f-bd0bb8bed4c71691135061630
+  height = 490
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"}) * 1.3","decimal":"false"}}
+  orientation = top-left
+  advanced_posx = {"placeholder":"calc","values":{"expression":"(-0.11*({"placeholder":"guiheight"} * 1.78) * 1.3) + ((-{"placeholder":"mouseposx"}) - (({"placeholder":"guiheight"} * 1.78) * 1.3)/2) /100","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 1.78) * 1.3","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"(-0.11*({"placeholder":"guiheight"}) * 1.3) + ((-{"placeholder":"mouseposy"}) - (({"placeholder":"guiheight"}) * 1.3)/2) /100","decimal":"false"}}
+    path = config/fancymenu/resources/night/fall/placeholder.png
+  [loading_requirement:fancymenu_visibility_requirement_is_element_hovered][requirement_mode:if][req_id:2041cc85-0596-433f-aee5-ae2695042e811691135247201] = 5a13ac09-ef4d-4f6d-8877-15a1d38af0561691135061630
+  x = 0
+  width = 872
+  action = addtexture
+  actionid = 0eeb834d-49d4-43cf-837c-44d77f5f40431691135081565
+  y = 0
+  height = 490
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"}) * 1.3","decimal":"false"}}
+  orientation = top-left
+  advanced_posx = {"placeholder":"calc","values":{"expression":"(-0.11*({"placeholder":"guiheight"} * 1.78) * 1.3) + ((-{"placeholder":"mouseposx"}) - (({"placeholder":"guiheight"} * 1.78) * 1.3)/2) /100","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 1.78) * 1.3","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"(-0.11*({"placeholder":"guiheight"}) * 1.3) + ((-{"placeholder":"mouseposy"}) - (({"placeholder":"guiheight"}) * 1.3)/2) /100","decimal":"false"}}
+   path = config/fancymenu/resources/night/fall/placeholder.png
+  x = 0
+  width = 872
+  action = addtexture
+  actionid = 949aab4c-b8f4-4801-a7f6-532cb0bbc9901691135081564
+  y = 0
+  [loading_requirement:fancymenu_visibility_requirement_is_element_hovered][requirement_mode:if][req_id:8842d54c-1e27-42a4-8f4f-44e2ec99087c1691135309675] = 8e13b4f1-a724-4eff-9641-0cea615794221691135061630
+  height = 490
+}
+
+customization {
+  advanced_height = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"}) * 1.3","decimal":"false"}}
+  orientation = top-left
+  advanced_posx = {"placeholder":"calc","values":{"expression":"(-0.11*({"placeholder":"guiheight"} * 1.78) * 1.3) + ((-{"placeholder":"mouseposx"}) - (({"placeholder":"guiheight"} * 1.78) * 1.3)/2) /100","decimal":"false"}}
+  advanced_width = {"placeholder":"calc","values":{"expression":"({"placeholder":"guiheight"} * 1.78) * 1.3","decimal":"false"}}
+  advanced_posy = {"placeholder":"calc","values":{"expression":"(-0.11*({"placeholder":"guiheight"}) * 1.3) + ((-{"placeholder":"mouseposy"}) - (({"placeholder":"guiheight"}) * 1.3)/2) /100","decimal":"false"}}
+    path = config/fancymenu/resources/night/fall/placeholder.png
+  [loading_requirement:fancymenu_visibility_requirement_is_element_hovered][requirement_mode:if][req_id:961e2dd9-a2dd-4222-af6f-6926a729ff871691135377360] = bbf1be76-85de-4f98-a626-4a3afa43d7c81691135061629
+  x = 0
+  width = 872
+  action = addtexture
+  actionid = d0ec1835-08df-42e3-a904-6a7c083a03a81691135081564
+  y = 0
+  height = 490
+}
+
