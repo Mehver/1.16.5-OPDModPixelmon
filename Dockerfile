@@ -7,7 +7,7 @@ COPY docker-init.sh ../init.sh
 RUN dos2unix ../init.sh && chmod +x ../init.sh
 RUN dos2unix /docker_init/Install.sh && chmod +x /docker_init/Install.sh
 RUN dos2unix /docker_init/settings.sh && chmod +x /docker_init/settings.sh
-RUN dos2unix /docker_init/start.sh && chmod +x /docker_init/start.sh
+RUN dos2unix /docker_init/docker-start.sh && chmod +x /docker_init/docker-start.sh
 WORKDIR /docker_init
 RUN ./Install.sh
 WORKDIR /minecraft

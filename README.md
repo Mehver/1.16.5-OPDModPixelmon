@@ -49,10 +49,10 @@ docker run -d \
   opdmc/1.16.5-opdmodpixelmon
 ```
 
-| Parameter                             | Function                                                        |                                  |
-|---------------------------------------|-----------------------------------------------------------------|----------------------------------|
-| `-p 127.0.0.1:80:25565/tcp`           | Minecraft server port                                           | MC服务器端口                          |
-| `-v /path/to/store/data:/minecraft`   | To store data in local, auto initialize if `start.sh` NOT exist | 服务器文件映射路径, `start.sh` 存在时将不进行初始化 |
+| Parameter                           | Function                                                               |                                         |
+|-------------------------------------|------------------------------------------------------------------------|-----------------------------------------|
+| `-p 127.0.0.1:80:25565/tcp`         | Minecraft server port                                                  | MC服务器端口                                 |
+| `-v /path/to/store/data:/minecraft` | To store data in local, auto initialize if `docker-start.sh` NOT exist | 服务器文件映射路径, `docker-start.sh` 不存在时将进行初始化 |
 
 ## 3 Reference
 
